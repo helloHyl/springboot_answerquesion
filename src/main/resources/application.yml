@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/quiz?serverTimezone=UTC
+      username: root
+      password: root
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tb_
+      id-type: auto
+#      配置mp的日志标准输出
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
